@@ -5,6 +5,7 @@ public class Contas {
     private double contaCondomínio;
     private double contaInternet;
     private double contaIPTU;
+    private double valorTotal;
 
     //get 
 
@@ -26,6 +27,9 @@ public class Contas {
     public double getContaInternet() {
         return contaInternet;
     }
+    public void setValorTotal(double valorTotal) {
+        this.valorTotal = valorTotal;
+    }
 
     //set
     public void setContaAluguel(double contaAluguel) {
@@ -45,5 +49,8 @@ public class Contas {
     }
     public void setContaInternet(double contaInternet) {
         this.contaInternet = contaInternet;
+    }
+    public double getValorTotal() {
+        return valorTotal;
     }
 }

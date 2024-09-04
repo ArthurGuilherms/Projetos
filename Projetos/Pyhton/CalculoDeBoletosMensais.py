@@ -1,7 +1,4 @@
-import requests
-from tkinter import *
-
-'''comando = int(input("\nQual o periodo do pagamento da conta?\n\n1 - Final do mês.  - (Entre os dias 20 e 29)\n"
+comando = int(input("\nQual o periodo do pagamento da conta?\n\n1 - Final do mês.  - (Entre os dias 20 e 29)\n"
                 "2 - Início do mês. - (Entre o dia 01 e 05)\n3 - Pagamento personalizado.\n\n>> "))
 conta = 0
 if comando == 1:
@@ -86,7 +83,7 @@ if comando == 3:
                     relatorio_detalhado_new = [str(a) for a in relatorio_detalhado[i]]
                     print(" ".join(relatorio_detalhado_new))
                 print("-----------------------------------")
-                print("Total: ", conta, "/", moradores, "=", round(conta_final, 2), "para cada.")'''
+                print("Total: ", conta, "/", moradores, "=", round(conta_final, 2), "para cada.")
 
 janela = Tk()
 janela.title("Calculo de Boletos")

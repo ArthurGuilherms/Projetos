@@ -89,8 +89,8 @@ public class App {
                     //Calculo da divisão Homens x Mulheres:
                     int valorDesconto = 70;
                     double valorDescontado = (conta.getContaEnergia() - valorDesconto) / pessoas;
-                    double valorHomens = Math.round((valorDescontado + (valorDescontado / pessoaDesconto)) * fatorDeMultiplicacao) / fatorDeMultiplicacao;
-                    double valorMulheres = Math.round((valorDescontado) * fatorDeMultiplicacao) / fatorDeMultiplicacao;
+                    double valorHomens = (Math.round((valorDescontado + (valorDescontado / pessoaDesconto)) * fatorDeMultiplicacao) / fatorDeMultiplicacao) + conta.getValorTotal() - conta.getContaEnergia();
+                    double valorMulheres = (Math.round((valorDescontado) * fatorDeMultiplicacao) / fatorDeMultiplicacao) + conta.getValorTotal() - conta.getContaEnergia();
                     valorPorGenero = ("\nHomens: " + valorHomens + "\nMulheres: " + valorMulheres);
                 }
 
@@ -126,6 +126,7 @@ public class App {
         //Impressão do relatório com os valores
         double valorTotal = conta.getContaAgua() + conta.getContaAluguel() + conta.getContaCondomínio() + conta.getContaEnergia() + conta.getContaInternet() + conta.getContaIPTU();
         valorTotal = Math.round((valorTotal) * fatorDeMultiplicacao) / fatorDeMultiplicacao;
+        conta.setValorTotal(valorTotal);
         String relatorioFinal = String.join("\n", Relatorio);
         System.out.println("\n" + relatorioFinal);
         System.out.println("---------------------------------");
