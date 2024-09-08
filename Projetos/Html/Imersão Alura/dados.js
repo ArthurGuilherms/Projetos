@@ -1,7 +1,7 @@
 let dados = [
     {
         nome: "Spore",
-        descricao: "Spore é um jogo de simulação de vida que te coloca no controle da evolução de uma espécie, desde um micróbio unicelular até uma civilização espacial. Você molda a aparência, o comportamento e a cultura de sua criatura, experimentando diversas fases de desenvolvimento: celular, criatura, tribal, civilizada e espacial.",
+        descricao: "Spore é um jogo der simulação de vida que te coloca no controle da evolução de uma espécie, desde um micróbio unicelular até uma civilização espacial. Você molda a aparência, o comportamento e a cultura de sua criatura, experimentando diversas fases de desenvolvimento: celular, criatura, tribal, civilizada e espacial.",
         siteOficial:"https://www.spore.com/"
     },
     {
