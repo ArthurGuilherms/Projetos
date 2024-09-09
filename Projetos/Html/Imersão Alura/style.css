@@ -121,16 +121,14 @@ footer {
     
 }
 
-
+/*Estilizam a scrollbar*/
 ::-webkit-scrollbar {
     width: 10px;
 }
-  
 ::-webkit-scrollbar-track {
     background: #f1f1f100;
     border-radius: 10px;
 } 
-  
   ::-webkit-scrollbar-thumb {
     background: #c9c8c8;
     border-radius: 10px;
