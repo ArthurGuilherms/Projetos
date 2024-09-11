@@ -17,6 +17,8 @@ class Usuario:
         self.telefone = input("Telefone:")
         self.senha = input("Senha:")
         Usuario.lista_senhas.append(self.senha)
+        self.login = False
+        print("Usuario adicionado com sucesso!\n")
        
     def logar(self):
         if self.login == True:
@@ -28,15 +30,22 @@ class Usuario:
 
                 selecao = input("\nEscolha uma opção:")
                 if selecao == "1":
-                    Usuario.cadastrar(self);
+                    Usuario.cadastrar(self)
                     break
 
                 if selecao == "2":
+                    verificaNome = input("Nome:")
+                    if (self.nome == verificaNome):
+                        verificaSenha = input("Senha:")
+                        if (self.senha == verificaSenha):
+                            self.login = True  
+                            print("Login realizado!\n")
+                            break
+                        else:
+                            print("Senha incorreta")
 
-                    """Implementar essa parte depois"""
-
-                    input("Nome:")
-                    print("Usuário não encontrado!")
+                    else:
+                        print("Usuário não encontrado!")
 
 
     def adicionarPedido(self):
