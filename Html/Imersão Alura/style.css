@@ -17,21 +17,22 @@ body {
 .button {
     background-color: #FF0000; /* Vermelho */
     color: #FFFFFF;
-    padding: 10px 20px;
     border-radius: 5px;
 }
 
 /* Estiliza os títulos h1 */
 h1 {
-    font-size: 4rem; /* Tamanho da fonte */
-    color: #1bd32a; /* Cor do texto */
+    padding-top: 30px;
+    font-size: 5rem; /* Tamanho da fonte */
+    color: #20ff2c; /* Cor do texto */
     margin-top: 10px;
     text-align: center; /* Alinha o texto ao centro */
-    letter-spacing: 0.4rem; /* Espaçamento entre letras */
+    letter-spacing: 0.5rem; /* Espaçamento entre letras */
 }
 
 /* Estiliza as seções da página */
 section {
+    
     font-family: "Chakra Petch", sans-serif;
     display: flex; /* Usa Flexbox para layout */
     flex-direction: column; /* Alinha os itens na vertical */
@@ -58,7 +59,7 @@ section button {
     padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
     border: none; /* Remove a borda padrão */
     border-radius: 1.5rem; /* Borda arredondada */
-    background-color: #1BD32A; /* Cor de fundo do botão */
+    background-color: #2b647e; /* Cor de fundo do botão */
     color: #FFFFFF; /* Cor do texto do botão */
     font-size: 1rem; /* Tamanho da fonte */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
@@ -67,7 +68,7 @@ section button {
 /* Estiliza a caixa de resultados da pesquisa */
 .resultados-pesquisa {
     width: 60rem; /* Largura máxima da caixa de resultados */
-    height: 46vh; /* Altura máxima da caixa de resultados */
+    max-height: 150vh; /* Altura máxima da caixa de resultados */
     overflow-y: auto; /* Adiciona rolagem vertical se necessário */
     margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
     padding: 1rem; /* Espaçamento interno */
@@ -93,7 +94,7 @@ section button {
 /* Estiliza os links dentro dos itens de resultado */
 .item-resultado a {
     text-decoration: none; /* Remove o sublinhado padrão dos links */
-    color: #00ff15; /* Cor do texto dos links */
+    color: #9bff9b; /* Cor do texto dos links */
 }
 
 /* Estiliza os links quando são passados o mouse sobre */
