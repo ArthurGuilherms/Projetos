@@ -1,0 +1,21 @@
+div {
+    height: 140px;
+    width: 300px;
+    padding: 20px;
+    border: 20px solid black;
+    font-weight: bold;
+}
+
+#div1{
+    background-color: cadetblue;
+    cursor: pointer;
+}
+
+#div2{
+    background-color: red;
+    margin-left: 380px;
+}
+
+#div3{
+    background-color: yellow;
+}

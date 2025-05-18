@@ -1,0 +1,330 @@
+/* :root define variáveis CSS globais para os temas */
+:root {
+  /* Tema Escuro (Padrão Inicial) */
+  --bg-color: #121212; /* Fundo bem escuro, como na imagem */
+  --surface-color: #1e1e1e; /* Cor de superfície para elementos como input */
+  --primary-text-color: #e0e0e0; /* Texto principal claro */
+  --secondary-text-color: #a0a0a0; /* Texto secundário/placeholder */
+  --avatar-bg: transparent; /* Fundo do avatar, pode ser uma cor sutil se necessário */
+  --bot-message-bg: #2a2a2a; /* Fundo do balão de mensagem do bot */
+  --user-message-bg: #005040; /* Fundo do balão de mensagem do usuário (um verde escuro, por exemplo) */
+  --user-message-text-color: #e0e0e0;
+  --accent-color: #ffffff; /* Cor de destaque para ícones, bordas ativas */
+  --button-bg-color: #2a2a2a;
+  --button-hover-bg-color: #3a3a3a;
+  --icon-color: #b0b0b0;
+  --icon-hover-color: #ffffff;
+  --footer-bg-color: #1e1e1e;
+  --footer-text-color: #757575;
+
+  /* Variáveis para o Tema Claro (serão aplicadas quando a classe .light-theme estiver no body) */
+  --light-bg-color: #f0f2f5;
+  --light-surface-color: #ffffff;
+  --light-primary-text-color: #1c1e21;
+  --light-secondary-text-color: #606770;
+  --light-bot-message-bg: #e4e6eb;
+  --light-user-message-bg: #0084ff;
+  --light-user-message-text-color: #ffffff;
+  --light-accent-color: #007bff;
+  --light-button-bg-color: #f0f2f5;
+  --light-button-hover-bg-color: #e0e2e5;
+  --light-icon-color: #606770;
+  --light-icon-hover-color: #1c1e21;
+  --light-footer-bg-color: #e4e6eb;
+  --light-footer-text-color: #606770;
+
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --border-radius-small: 8px;
+  --border-radius-large: 20px; /* Para os balões de mensagem e input */
+}
+
+/* Estilos para o tema claro */
+body.light-theme {
+  --bg-color: var(--light-bg-color);
+  --surface-color: var(--light-surface-color);
+  --primary-text-color: var(--light-primary-text-color);
+  --secondary-text-color: var(--light-secondary-text-color);
+  --bot-message-bg: var(--light-bot-message-bg);
+  --user-message-bg: var(--light-user-message-bg);
+  --user-message-text-color: var(--light-user-message-text-color);
+  --accent-color: var(--light-accent-color);
+  --button-bg-color: var(--light-button-bg-color);
+  --button-hover-bg-color: var(--light-button-hover-bg-color);
+  --icon-color: var(--light-icon-color);
+  --icon-hover-color: var(--light-icon-hover-color);
+  --footer-bg-color: var(--light-footer-bg-color);
+  --footer-text-color: var(--light-footer-text-color);
+}
+
+/* Estilos Base */
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--primary-text-color);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Para empurrar o footer para baixo */
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 0; /* Removido padding do body anterior */
+}
+
+.site-header {
+  width: 100%;
+  padding: 15px 25px; /* Aumentado o padding lateral */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start; /* Botão de tema no canto superior esquerdo */
+  position: fixed; /* Fixa o header no topo */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.theme-toggle-button {
+  background: none;
+  border: none;
+  color: var(--icon-color);
+  cursor: pointer;
+  font-size: 1.8em; /* Tamanho do ícone */
+  padding: 5px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle-button:hover {
+  color: var(--icon-hover-color);
+  background-color: rgba(255, 255, 255, 0.1); /* Leve destaque no hover */
+}
+
+body.light-theme .theme-toggle-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  width: 100%;
+  max-width: 750px; /* Aumentar um pouco a largura máxima */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px; /* Espaço para o header fixo */
+  padding-bottom: 100px; /* Espaço para o footer fixo */
+  flex-grow: 1; /* Para ocupar o espaço disponível */
+}
+
+.avatar-section {
+  margin-bottom: 30px; /* Mais espaço abaixo do avatar */
+  text-align: center;
+}
+
+#avatarImage {
+  width: 150px; /* Tamanho do avatar como no design */
+  height: 220px;
+  border-radius: 50%;
+  /* box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); Removido ou ajustar para o tema */
+  /* No design o avatar é só um contorno branco, então a imagem deve ser assim */
+  /* Se a imagem tiver fundo, você pode precisar de: background-color: var(--avatar-bg); */
+}
+
+body.dark-theme #avatarImage {
+  filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 1px #fff);
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.chat-area {
+  height: 30vh; /* Altura do chatbox */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Ocupa o espaço vertical */
+  justify-content: flex-end; /* Alinha o input na parte inferior */
+  max-height: 20%; /* Altura máxima considerando header e footer */
+}
+
+#chatbox {
+  width: 90%; /* Ajuste a largura para 90% do container */
+  max-height: 300px; /* Defina a altura máxima para 300px */
+  overflow-y: auto; /* Adicione rolagem vertical se o conteúdo exceder a altura */
+  padding: 10px 20px; /* Ajuste o espaçamento interno */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaço entre as mensagens */
+}
+
+/* Estilização da barra de rolagem para navegadores WebKit (Chrome, Safari, Edge novo) */
+#chatbox::-webkit-scrollbar {
+  width: 8px;
+}
+
+#chatbox::-webkit-scrollbar-track {
+  background: transparent; /* Fundo da trilha da barra de rolagem */
+}
+
+#chatbox::-webkit-scrollbar-thumb {
+  background-color: var(--surface-color); /* Cor do polegar da barra de rolagem */
+  border-radius: 10px;
+  border: 2px solid var(--bg-color); /* Cor da borda igual ao fundo do chatbox */
+}
+
+.message {
+  padding: 10px 18px; /* Ajustado padding */
+  border-radius: var(--border-radius-large);
+  line-height: 1.5;
+  max-width: 75%; /* Um pouco mais largo */
+  word-wrap: break-word;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.message p {
+  margin: 0;
+}
+
+.bot-message {
+  background-color: var(--bot-message-bg);
+  color: var(--primary-text-color);
+  align-self: flex-start; /* Mensagem da Aura à esquerda */
+  border-bottom-left-radius: var(--border-radius-small); /* Para dar o formato de balão */
+}
+
+.user-message {
+  background-color: var(--user-message-bg);
+  color: var(--user-message-text-color); /* Ajustado para ter contraste com o fundo do user-message */
+  align-self: flex-end; /* Mensagem do usuário à direita */
+  border-bottom-right-radius: var(--border-radius-small);
+}
+
+.input-area {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px; /* Ajustado padding */
+  background-color: var(--bg-color); /* Input area com a mesma cor do fundo principal */
+  /* border-top: 1px solid var(--surface-color); O design não mostra uma linha divisória clara aqui */
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#userInput {
+  flex-grow: 1;
+  padding: 12px 20px; /* Ajustado padding */
+  border: 1px solid var(--surface-color);
+  background-color: var(--surface-color);
+  color: var(--primary-text-color);
+  border-radius: var(--border-radius-large);
+  font-size: 1em;           /* Ou use o mesmo valor do input, ex: 1.1em ou 16px */
+  font-family: inherit;     /* Garante que herda a fonte do body */
+  line-height: 1.5;         /* Ajuste conforme o input */
+  margin-right: 10px;
+  outline: none;
+  transition: border-color 0.2s;
+  resize: none;           /* Impede o redimensionamento manual */
+  min-height: 48px;       /* Altura inicial igual ao input */
+  max-height: 180px;      /* Altura máxima para não crescer demais */
+  overflow-y: hidden;
+  box-sizing: border-box;
+}
+
+#userInput::placeholder {
+  color: var(--secondary-text-color);
+}
+
+#userInput:focus {
+  border-color: var(--accent-color);
+}
+
+#sendMessageBtn {
+  background-color: transparent; /* Botão de enviar sem fundo, só o ícone */
+  color: var(--icon-color);
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6em; /* Tamanho do ícone de enviar */
+  transition: color 0.2s, background-color 0.2s;
+}
+
+#sendMessageBtn:hover {
+  color: var(--icon-hover-color);
+  background-color: var(--button-hover-bg-color);
+}
+
+footer {
+  width: 100%;
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
+  padding: 15px;
+  text-align: center;
+  font-size: 0.8em;
+  box-sizing: border-box;
+  position: fixed; /* Fixa o footer na base */
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+footer strong {
+  color: var(--user-message-bg); /* Pode ser uma cor de alerta ou a cor de destaque do tema */
+}
+
+body.light-theme footer strong {
+  color: #d9534f; /* Um vermelho para alerta no tema claro */
+}
+
+/* Ajustes para telas menores, se necessário */
+@media (max-width: 600px) {
+  .container {
+      padding-top: 70px; /* Ajustar se o header mudar de tamanho */
+      padding-bottom: 120px; /* Ajustar se o footer mudar de tamanho */
+  }
+
+  #chatbox {
+      padding: 10px 15px;
+  }
+
+  .input-area {
+      padding: 10px 15px;
+  }
+
+  #userInput {
+      padding: 10px 15px;
+  }
+
+  .message {
+      max-width: 85%;
+  }
+}
+
+.sound-toggle-button {
+  background: none;
+  border: none;
+  color: var(--icon-color);
+  cursor: pointer;
+  font-size: 1.8em;
+  padding: 5px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px; /* Espaço entre os botões */
+}
+
+.sound-toggle-button:hover {
+  color: var(--icon-hover-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.light-theme .sound-toggle-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}

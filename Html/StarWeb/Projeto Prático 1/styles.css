@@ -1,0 +1,307 @@
+/*Importa uma fonte externa que será utilizada*/
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Kdam+Thmor+Pro&display=swap');
+
+/*Seletor universal para aplicar propriedades em todos elementos da página*/
+* {
+    background-color: rgb(0, 0, 0); /*Coloca o fundo preto como padrão ná pagina*/
+    margin: 0; /*Remove a margem padrão*/
+    padding: 0; /*Remove o padding (magem interna) padrão*/
+    list-style: none; /*List stule serve par personalizar as listagens de elementos (ol e ul), ao colocar none, elimina=se a personalização*/
+    text-decoration: none; /*Retira a estilização */
+    color: #fff;
+    font-family: "Kdam Thmor Pro", serif;
+}
+
+header {
+    background-color: black;
+    height: 104px; /*Define a altura do cabeçalho como 104 pixels*/
+    display: flex; /*Define o modo de exibição do cabeçalho como flexbox*/
+                   /*Flexbox perminte colocar outros elementos dentro deste, de forma fácil e flexivel*/
+    justify-content: space-around; /*Distribui os filhos do cabeçalho ao longo do eixo principal (horizontal, por padrão) com espaço igual ao redor de cada um*/
+    align-items: center; /*Centraliza os filhos no meio vertical do cabeçalho*/
+}
+
+nav {
+    width: 60%; /*Define o tamanho da navegação para 60% do elemento pai, nesse caso, o cabeçalho*/
+}
+
+/*Ul cria uma lista desordenada*/
+ul {
+    display: flex; /*Habilita o flexbox para a lista*/
+    width: 100%; /*Largura de 100% do elemento pai, nesse caso, a navegação*/
+    justify-content: space-between; /*Distribui os itens ao longo do eixo principal com espaço entre eles. Empurra o primeiro para a esquerda e o último para a direita*/
+
+}
+
+/*li = list itens*/
+li {
+    color: aliceblue; /*Define a cor para branco*/
+    cursor: pointer; /*Faz com que o ponteiro mude ao passar o cursor por cima da letra*/
+    font-size: 19px; /*Define o tamanho da fonte para 19px*/
+    transition: .5s; /*Define que as animações feitas nesses itens acontecerão num intervalo de 1,5 segundos*/
+    font-family: "Kdam Thmor Pro", serif; /*Seleciona uma fonte externa*/
+}
+
+li:hover {
+    /*:hover cria uma animação que ocorrerá ao passar o cursor*/
+    color: yellow; /*faz com que a letra mude para a cor amarela ao passar o cursor*/
+}
+#logo {
+    background-color: black; /*Define que o fundo da logo será preto*/
+    width: 100px; /*Define um tamanho para a logo de 100px*/
+    height: auto; /*Autura automática, mantem a proporção da imagem*/
+}
+
+/*Seletor para o elemento com id="banner"*/
+.banner {
+    background-image: url('https://www.nbc.com/sites/nbcblog/files/2023/03/the-super-mario-bros-movie-poster-1.jpg'); /*Define a imagem de fundo*/
+    background-position: 50% 40%; /*Posiciona a iamgem de fundo no centro da horizontal (50%) e um pouco acima do centro da vertical (40%)*/
+    background-size: cover; /*Escala a imagem para cobrir todo o banner, cortando partes se necessário*/
+    height: 700px; /*Deine a altura de 700px*/
+    width: 100%; /*Define que a largura do banner será 100% do elemento paí, nesse caso, o boddy da página. Ocupando o espaço máximo.*/
+}
+
+.banner-fotos{
+    margin-top: 20px;
+    height: 250px;
+    background-position: 20% 65%;
+}
+
+/*Cria um container disponivel para colocar o conteúdo*/
+#trailer-container {
+    width: auto; /*Define a largura automaticamente*/
+    height: 300px; /*Define o tamanho do vídeo para 300px*/
+    display: flex; /*Habilita um flexbox e centraliza o conteúdo horizontalmente*/
+    justify-content: center;
+}
+
+/*Ajusta o conteudo que será colocado no trailer content*/
+.content {
+    width: 70%; /*Define que cada conteudo terá 70% da largura do trailer content*/
+    display: flex; /*Habilita o Flexbox*/
+    align-items: center; /*Alinha os itens verticalmente ao centro*/
+    justify-content: space-between; /*Distribui os elementos com espaços entre eles*/
+}
+
+.trailer {
+    width: 50%; /*Define que o trailer terá 50% da largura do conteiner .content*/
+}
+
+#sinopse {
+    width: 50%; /*Define a largura da sinopse como 50% do container .content*/
+    display: flex; /*Habilita o Felxbox*/
+    flex-direction: column; /*Define o eixo principal como veritcal (organiza em coluna)*/
+    justify-content: space-between; /*Distribui o espaço entre os elementos*/
+    margin-left: 30px; /*Adiciona uma margem à esquerda*/
+}
+
+.description {
+    margin-top: 30px;
+    color: #fff;
+    font-size: 18px;
+    font-family: "Kdam Thmor Pro", serif;
+    width: 100%;
+}
+
+.button {
+    width: 200px;
+    height: 50px;
+    background-color: red;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 17px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    margin-top: 25px;
+    margin-left: 230px;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: red;  
+}
+
+.actor-cards-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+
+.cards-content {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    row-gap: 20px;
+    column-gap: 40px;
+}
+
+.card {
+    width: 100%;
+    height: 500px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 20px 10px;
+    color: #fff;
+    font-size: 17px;
+    font-family: "Kdam Thmor Pro", serif;
+    text-shadow: 2px 2px 5px #000;
+    transition: .8s;
+}
+
+.card:hover {
+    transform: scale(1.04); 
+}
+
+.banner-1 {
+    background-image: url('https://i.namu.wiki/i/CrM_FvWis30JhhMWAJUfxHMwUk2upBb2gvt-V9zTbakA_GQFJXonXfT-2641kjOx0EcjsBJAnWUGp9-0AtJnLkFw90IP8eNKYCeIpqF4EKT1ZzBw1KySwXLNoGv-x16_lWGZQYni7zEEx3BDST_mtR_4W6q9BfkE5MF1gfAZnqA.webp');
+    background-position: 50% 20%;
+    background-size: 300% 200%;
+}
+
+.banner-2 {
+    background-image: url('https://i.namu.wiki/i/CrM_FvWis30JhhMWAJUfxKcePPR9Eo9p-R3VG4FtnaxkSemf2rPpxN7Pluu9RabZHvQUALcQiYdFZKCf9ztkplwCmSXFZs1p50NHpaRzeotfiuA_MKXhvl7kbapqhMvbQmnXlfnuC2vfR50WVS7wodiMjNJ8BGUPjOmPrb0H4Qo.webp');
+    background-position: 4% 60%;
+    background-size: 375% 950px;
+}
+
+.banner-3 {
+    background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/10861.jpg');
+    background-position: 63% 0%;
+    background-size: 850px 100%;
+}
+
+.banner-4 {
+    background-image: url('https://i.namu.wiki/i/CrM_FvWis30JhhMWAJUfxH5X1LF0S6-9-f_Dzw31QzwVLFR_a51VA3SlmfmhLbmTetQ4-LkxmUDdgc8JVfOPcUKmjC6p8gAtaK535MCw-pzqBSnm56dP86JglKVlpK4DGerdBEvsQ8eboq271nBNVE_5442D0ImbkLh_nBbYPCw.webp');
+    background-position: 70% 55%;
+    background-size: 350% 200%;}
+
+.banner-5 {
+    background-image: url('https://i.namu.wiki/i/CrM_FvWis30JhhMWAJUfxI5wfEcBQcwC2dIX4c8Pj3ciojX8ID_ABTwU8OValiEEFA08_umZLZ8WQ7oBnYWV5lCz0J8xier2jDStklqT59HGEFYSzpgI6Kcxib5l3leEKey5f66S9KHhnUWn-CjoY4anMRNl6RDDs6LfQi0bC0s.webp');
+    background-position: 62% 60%;
+    background-size: 350% 200%;
+}
+
+footer {    
+    height: 300px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+span {
+    color: #fff;
+    font-family: "Kdam Thmor Pro", serif;
+}
+
+.footer-navigation {
+    display: none;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-teste {
+    margin-top: 80px;
+    margin-left: 10%;
+    width: 1000px;
+    height: 70vh;
+    display: flex;
+    gap: 15px;
+    justify-content: space-around;
+}
+
+.caixa {
+    background-color: red;
+    width: 290px;
+}
+
+
+#imagem {
+    border-radius: 7%;
+    max-width: 50vw;
+    transition: 0.8s;
+}
+
+#imagem:hover {
+    transform: scale(1.09);
+}
+
+
+.descricao {
+    width: 50%; /*Define a largura da sinopse como 50% do container .content*/
+    display: flex; /*Habilita o Felxbox*/
+    flex-direction: column; /*Define o eixo principal como veritcal (organiza em coluna)*/
+    justify-content: center;
+    margin-left: 30px; /*Adiciona uma margem à esquerda*/
+    align-items: center;
+}
+
+.button-baixar {
+    margin-left: 0px;
+    margin-left: 180px;
+}
+
+@media(max-width:768px) {
+    .footer-navigation{
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #banner {
+        background-position: 48%;
+    }
+
+    #trailer-container{
+        width: 100%;
+        height: 480px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #sinopse {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .description{
+        width: 100%;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .cards-content{
+        grid-template-columns: 1fr;
+        margin-top: 150px;
+
+    }
+}
+

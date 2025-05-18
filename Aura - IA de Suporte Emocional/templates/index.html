@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura - Seu Suporte Emocional</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="dark-theme"> 
+    <header class="site-header">
+        <button id="themeToggleButton" class="theme-toggle-button" aria-label="Alternar tema">
+            <i class="ph ph-lightbulb"></i>
+        </button>
+        <button id="soundToggleButton" class="sound-toggle-button" aria-label="Ativar/Desativar som">
+            <i class="ph ph-speaker-high"></i>
+        </button>
+    </header>
+
+    <div class="container">
+        <div class="avatar-section">
+            <img id="avatarImage" src="{{ url_for('static', filename='images/avatar/neutro.png') }}" alt="Avatar Aura">
+            </div>
+
+        <main class="chat-area">
+            <div id="chatbox">
+                <div class="message bot-message">
+                    <p>Olá! Meu nome é <b>Aura</b>, como posso te ajudar hoje?</p>
+                </div>
+            </div>
+            <div class="input-area">
+                <textarea id="userInput" placeholder="Pergunte alguma coisa..." autocomplete="off" rows="1"></textarea>
+                <button id="sendMessageBtn" aria-label="Enviar mensagem">
+                    <i class="ph ph-paper-plane-tilt"></i>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p><strong>Importante:</strong> Aura é uma IA de suporte e não substitui aconselhamento profissional. Se precisar de ajuda urgente, entre em contato com o CVV (Ligue 188) ou procure um profissional de saúde mental.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

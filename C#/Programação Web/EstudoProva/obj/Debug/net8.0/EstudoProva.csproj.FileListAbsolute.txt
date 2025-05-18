@@ -1,0 +1,15 @@
+C:\Users\Arthur\Desktop\Programação\GitHubFiles\C#\Programação Web\EstudoProva\bin\Debug\net8.0\EstudoProva.exe
+C:\Users\Arthur\Desktop\Programação\GitHubFiles\C#\Programação Web\EstudoProva\bin\Debug\net8.0\EstudoProva.deps.json
+C:\Users\Arthur\Desktop\Programação\GitHubFiles\C#\Programação Web\EstudoProva\bin\Debug\net8.0\EstudoProva.runtimeconfig.json
+C:\Users\Arthur\Desktop\Programação\GitHubFiles\C#\Programação Web\EstudoProva\bin\Debug\net8.0\EstudoProva.dll
+C:\Users\Arthur\Desktop\Programação\GitHubFiles\C#\Programação Web\EstudoProva\bin\Debug\net8.0\EstudoProva.pdb
+C:\Users\Arthur\Desktop\Programação\GitHubFiles\C#\Programação Web\EstudoProva\obj\Debug\net8.0\EstudoProva.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Arthur\Desktop\Programação\GitHubFiles\C#\Programação Web\EstudoProva\obj\Debug\net8.0\EstudoProva.AssemblyInfoInputs.cache
+C:\Users\Arthur\Desktop\Programação\GitHubFiles\C#\Programação Web\EstudoProva\obj\Debug\net8.0\EstudoProva.AssemblyInfo.cs
+C:\Users\Arthur\Desktop\Programação\GitHubFiles\C#\Programação Web\EstudoProva\obj\Debug\net8.0\EstudoProva.csproj.CoreCompileInputs.cache
+C:\Users\Arthur\Desktop\Programação\GitHubFiles\C#\Programação Web\EstudoProva\obj\Debug\net8.0\EstudoProva.sourcelink.json
+C:\Users\Arthur\Desktop\Programação\GitHubFiles\C#\Programação Web\EstudoProva\obj\Debug\net8.0\EstudoProva.dll
+C:\Users\Arthur\Desktop\Programação\GitHubFiles\C#\Programação Web\EstudoProva\obj\Debug\net8.0\refint\EstudoProva.dll
+C:\Users\Arthur\Desktop\Programação\GitHubFiles\C#\Programação Web\EstudoProva\obj\Debug\net8.0\EstudoProva.pdb
+C:\Users\Arthur\Desktop\Programação\GitHubFiles\C#\Programação Web\EstudoProva\obj\Debug\net8.0\EstudoProva.genruntimeconfig.cache
+C:\Users\Arthur\Desktop\Programação\GitHubFiles\C#\Programação Web\EstudoProva\obj\Debug\net8.0\ref\EstudoProva.dll
