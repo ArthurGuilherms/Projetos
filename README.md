@@ -1,4 +1,4 @@
-# Repositório de Projetos Pessoais
+# Repositório de Antigos Projetos Pessoais
 
 **Bem-vindo ao meu repositório pessoal!**
 
@@ -6,8 +6,7 @@ Aqui você encontrará códigos em desenvolvimento, estudos e experimentos que t
 
 # Atenção!
 
-* **Em construção:** Este repositório é um reflexo da minha jornada de aprendizado. A organização ainda está em andamento.
-* **Explore por sua conta e risco:** Contém códigos experimentais, ideias malucas e certamente algumas anomalias.
+* **Em construção:** A organização ainda está em andamento.
 
 ## Objetivo
 
